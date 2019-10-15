@@ -2,7 +2,7 @@
 #include <climits>
 #include "exprtk.hpp"
 
-double error = 0.0000001;
+double error = 0.00000001;
 double c;
 
 using namespace std;
@@ -11,9 +11,8 @@ using namespace std;
 void intervalos(double *a, double *b){
   cout << "Introduzca primer intervalo: ";
   cin >> *a;
-  cout << "\nIntroduzca segundo intervalo: ";
+  cout << "Introduzca segundo intervalo: ";
   cin >> *b;
-
 }
 
 //pide y evalua la funcion
@@ -38,13 +37,21 @@ double func(string expression_str, double x){
   return expression.value();
 }
 
+double derivada(string s, double x){
+
+  double h = .000000001, d;
+  d = (func(s, (x+h))-(func(s, x)))/h;
+
+  return d;
+}
+
 void biseccion(double a, double b, string s){
   if((func(s, a) * func(s, b)) >= 0){
-      cout<<"Dentro de ese intervalo no existe raíz real.";
+      cout<<"Dentro de ese intervalo no hay raíz.";
       return;
   }
   c = a;
-  while ((b-a) >= error){
+  while ((b-a) > error){
       c = (a+b)/2;
       if (func(s, c) == 0.0)
           break;
@@ -68,28 +75,27 @@ void falsa_posicion(double xl, double xu, string s){
     total=f1*f2;
 
     if(total > 0){
-        printf("Invalid initial guesses!!!");
-        return;
+      cout<<"Dentro de ese intervalo no hay raíz.";
+      return;
     }
 
-    do
-    {
-        if(i != 1)
-            prevRoot = xr;
+    do{
+      if(i != 1)
+        prevRoot = xr;
 
-        xr = ((xu*func(s,xl))-(xl*func(s,xu)))/(func(s, xl)-func(s, xu));
+      xr = ((xu*func(s,xl))-(xl*func(s,xu)))/(func(s, xl)-func(s, xu));
 
-        approxError= fabs((xr - prevRoot) / xr) * 100;
+      approxError = fabs((xr - prevRoot) / xr) * 100;
 
-        f1= func(s, xl);
-        f2=func(s, xr);
-        total=f1*f2;
+      f1= func(s, xl);
+      f2=func(s, xr);
+      total=f1*f2;
 
-        if(total < 0)
-            xu = xr;
-        else if(total > 0)
-            xl = xr;
-        i++;
+      if(total < 0)
+          xu = xr;
+      else if(total > 0)
+          xl = xr;
+      i++;
     }
     while(approxError >  c);
     c = xr;
@@ -105,12 +111,21 @@ void secante(double b, double e, string s){
       c = e;
       return;
     }
-  }while(abs(c-b)>= error);
+  } while(abs(c-b) > error);
 }
 
+void newton (double x, string s){
+  double ant;
+  ant = x;
+  while (abs(func(s, x)) > error) {
+    x = ant - (func(s, ant) / derivada(s, ant));
+    ant = x;
+  }
+  c = x;
+}
 
 int main (){
-  cout.precision(6);
+  cout.precision(7);
   cout.setf(ios::fixed);
 
   double a, b; //intervalos
@@ -129,21 +144,8 @@ int main (){
   secante(a, b, expression_str);
   cout << "\nRaíz de "<<expression_str<< " en el intervalo " <<'[' << a << ", " << b << "]: "<< c << '\n';
 
+  newton(a, expression_str);
+  cout << "\nRaíz de "<<expression_str<< " en el intervalo " <<'[' << a << ", " << b << "]: "<< c << '\n';
+
   return 0;
 }
-
-
-//
-// void derivative(){
-//
-//   double h = .0001;
-//   double d = 0;
-//
-//   do{
-//     d = ()
-//
-//
-//     h -= .000001;
-//
-//   }while(d > error);
-// }
