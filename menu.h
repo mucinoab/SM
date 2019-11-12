@@ -6,6 +6,8 @@
 #include <ecuacionesnolineales.h>
 #include <sel.h>
 #include <mensajesalida.h>
+#include<menufactorizacion.h>
+#include <resumenlu.h>
 
 namespace Ui {
 class Menu;
@@ -27,6 +29,8 @@ private slots:
     void on_pushButton_5_clicked();
 
     void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::Menu *ui;

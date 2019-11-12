@@ -22,28 +22,28 @@ void menuecuacionesnolineales::on_pushButton_clicked()
 
 void menuecuacionesnolineales::on_pushButton_2_clicked()
 {
-    biseccion *ventana = new biseccion;
+    resumenbiseccion *ventana = new resumenbiseccion;
     ventana->setVisible(true);
     this->setVisible(false);
 }
 
 void menuecuacionesnolineales::on_pushButton_3_clicked()
 {
-    falsaposicion *ventana = new falsaposicion;
+    resumenfalsa *ventana = new resumenfalsa;
     ventana->setVisible(true);
     this->setVisible(false);
 }
 
 void menuecuacionesnolineales::on_pushButton_4_clicked()
 {
-    newton *ventana = new newton;
+    resumenNewton *ventana = new resumenNewton;
     ventana->setVisible(true);
     this->setVisible(false);
 }
 
 void menuecuacionesnolineales::on_pushButton_5_clicked()
 {
-    secante *ventana = new secante;
+    resumenSecante *ventana = new resumenSecante;
     ventana->setVisible(true);
     this->setVisible(false);
 }

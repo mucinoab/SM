@@ -40,3 +40,10 @@ void Menu::on_pushButton_3_clicked()
     ventana->setVisible(true);
     this->setVisible(false);
 }
+
+void Menu::on_pushButton_4_clicked()
+{
+    resumenLU *x = new resumenLU;
+    x->setVisible(true);
+    this->setVisible(false);
+}

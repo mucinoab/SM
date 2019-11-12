@@ -1,6 +1,10 @@
-QT       += core gui
+QT      += core gui
+QT      += qml
+QT      += printsupport
+QT      += gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+greaterThan(QT_MAJOR_VERSION, 4)QT += widgets
 
 CONFIG += c++11
 
@@ -17,44 +21,101 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     biseccion.cpp \
+    crout.cpp \
+    dolittle.cpp \
     ecuacionesnolineales.cpp \
     falsaposicion.cpp \
+    gauss.cpp \
+    gaussjordan.cpp \
+    gaussseidel.cpp \
+    jacobi.cpp \
     main.cpp \
     mainwindow.cpp \
     mensajeintroduccion.cpp \
     mensajesalida.cpp \
     menu.cpp \
     menuecuacionesnolineales.cpp \
+    menufactorizacion.cpp \
     menusel.cpp \
     newton.cpp \
+    resumenbiseccion.cpp \
+    resumencrout.cpp \
+    resumendolittle.cpp \
+    resumenfalsa.cpp \
+    resumengauss.cpp \
+    resumengaussjordan.cpp \
+    resumengaussseidel.cpp \
+    resumenjacobi.cpp \
+    resumenlu.cpp \
+    resumennewton.cpp \
+    resumensecante.cpp \
     secante.cpp \
     sel.cpp
 
 HEADERS += \
+    /home/bruno/Downloads/GraficaDeFunciones/DuPlot.h \
+    /home/bruno/Downloads/qcustomplot-source/qcustomplot.h \
     biseccion.h \
+    crout.h \
+    dolittle.h \
     ecuacionesnolineales.h \
     falsaposicion.h \
+    gauss.h \
+    gaussjordan.h \
+    gaussseidel.h \
+    jacobi.h \
     mainwindow.h \
     mensajeintroduccion.h \
     mensajesalida.h \
     menu.h \
     menuecuacionesnolineales.h \
+    menufactorizacion.h \
     menusel.h \
     newton.h \
+    resumenbiseccion.h \
+    resumencrout.h \
+    resumendolittle.h \
+    resumenfalsa.h \
+    resumengauss.h \
+    resumengaussjordan.h \
+    resumengaussseidel.h \
+    resumenjacobi.h \
+    resumenlu.h \
+    resumennewton.h \
+    resumensecante.h \
     secante.h \
     sel.h
 
 FORMS += \
     biseccion.ui \
+    crout.ui \
+    dolittle.ui \
     ecuacionesnolineales.ui \
     falsaposicion.ui \
+    gauss.ui \
+    gaussjordan.ui \
+    gaussseidel.ui \
+    grafica.ui \
+    jacobi.ui \
     mainwindow.ui \
     mensajeintroduccion.ui \
     mensajesalida.ui \
     menu.ui \
     menuecuacionesnolineales.ui \
+    menufactorizacion.ui \
     menusel.ui \
     newton.ui \
+    resumenbiseccion.ui \
+    resumencrout.ui \
+    resumendolittle.ui \
+    resumenfalsa.ui \
+    resumengauss.ui \
+    resumengaussjordan.ui \
+    resumengaussseidel.ui \
+    resumenjacobi.ui \
+    resumenlu.ui \
+    resumennewton.ui \
+    resumensecante.ui \
     secante.ui \
     sel.ui
 

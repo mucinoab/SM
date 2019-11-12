@@ -3,10 +3,10 @@
 
 #include <QMainWindow>
 #include <ecuacionesnolineales.h>
-#include <biseccion.h>
-#include <falsaposicion.h>
-#include <newton.h>
-#include <secante.h>
+#include <resumenbiseccion.h>
+#include <resumenfalsa.h>
+#include <resumennewton.h>
+#include <resumensecante.h>
 
 namespace Ui {
 class menuecuacionesnolineales;
