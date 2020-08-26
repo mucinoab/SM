@@ -1,6 +1,6 @@
 # Métodos Numéricos I 
 
-Sistema para resolver ecuaciones lineales y no lineales implementado en C++ usando el framework [QT](https://www.qt.io/) para la interfaz gráfica.   
+Sistema gráfico para resolver ecuaciones lineales y no lineales implementado en C++ y [QT](https://www.qt.io/).
 
 
 - Newton
