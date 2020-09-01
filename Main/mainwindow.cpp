@@ -24,6 +24,6 @@ void MainWindow::on_boton_clicked()
 void MainWindow::on_pushButton_clicked()
 {
     mensajeIntroduccion *ventana = new mensajeIntroduccion;
-    ventana->show();            //ventana->setVisible(true);   ==  ventana->show();
-    this->setVisible(false);    //this->hide();  ==  ventana->setVisible(false);
+    ventana->show();            
+    this->setVisible(false);   
 }
