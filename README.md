@@ -1,7 +1,7 @@
 # Métodos Numéricos I 
+![Métodos Uno](/MI.png "Header image")
 
 Sistema gráfico para resolver ecuaciones lineales y no lineales implementado en C++ y [QT](https://www.qt.io/).
-
 
 - Newton
 - Gauss
